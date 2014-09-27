@@ -25,7 +25,7 @@ var pale = L.tileLayer(
     attribution: "地理院タイル（淡色地図）", maxZoom: 20, maxNativeZoom: 18});
 var relief = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png', {
-    attribution: "地理院タイル（色別標高図）", minZoom: 5, maxZoom: 15});
+    attribution: "地理院タイル（色別標高図）", minZoom: 5, maxZoom: 20, maxNativeZoom: 15});
 var ontake = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
     attribution: "火山基本図（御岳山）<a href='http://cyberjapan.jp/legend/l_vbm_ontake.jpg'>凡例</a>"});
