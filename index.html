@@ -20,13 +20,20 @@ html, body, #mapdiv {height: 100%; width: 100%;}
 var std = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
     attribution: "地理院タイル（標準地図）"});
+var ontake = L.tileLayer(
+  'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
+    attribution: "火山基本図（御岳山）"});
 
 var map = L.map('mapdiv', {
   center: [35.3622222, 138.7313889], zoom: 5,
-  layers: [std]});
+  layers: [std, ontake]});
 
 var hash = L.hash(map);
-L.control.layers({'地理院タイル（標準地図）': std}).addTo(map);
+L.control.layers({
+  '地理院タイル（標準地図）': std
+}, {
+  '火山基本図（御岳山）': ontake
+}).addTo(map);
 </script>
 </body>
 </html>
