@@ -20,6 +20,12 @@ html, body, #mapdiv {height: 100%; width: 100%;}
 var std = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
     attribution: "地理院タイル（標準地図）"});
+var pale = L.tileLayer(
+  'http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
+    attribution: "地理院タイル（淡色地図）"});
+var relief = L.tileLayer(
+  'http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png' {
+    attribution: "地理院タイル（色別標高図）"});
 var ontake = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
     attribution: "火山基本図（御岳山）<a href='http://cyberjapan.jp/legend/l_vbm_ontake.jpg'>凡例</a>"});
@@ -30,7 +36,9 @@ var map = L.map('mapdiv', {
 
 var hash = L.hash(map);
 L.control.layers({
-  '地理院タイル（標準地図）': std
+  '地理院タイル（標準地図）': std,
+  '地理院タイル（淡色地図）': pale,
+  '地理院タイル（色別標高図）': relief
 }, {
   '火山基本図（御岳山）': ontake
 }).addTo(map);
