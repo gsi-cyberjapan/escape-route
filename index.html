@@ -42,12 +42,12 @@ var map = L.map('mapdiv', {
 
 var hash = L.hash(map);
 L.control.layers({
-  '地理院タイル（標準地図）＋火山基本図': std
+  '地理院タイル（標準地図）': std
 }, {
-  '地理院タイル（色別標高図）': relief,
+  '地理院タイル（色別標高図）（z=5以上）': relief,
   '火山土地条件図（御嶽山）（z=15以上）': ontakelc,
   '国土画像情報（第一期：1974～1978年撮影）(z=15以上)': gazo1,
-  '火山基本図（御嶽山）': ontake
+  '火山基本図（御嶽山）（z=17以上）': ontake
 }).addTo(map);
 </script>
 </body>
