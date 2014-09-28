@@ -19,10 +19,10 @@ html, body, #mapdiv {height: 100%; width: 100%;}
 <script>
 var std = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png', {
-    attribution: "地理院タイル（標準地図）", maxZoom: 20, maxNativeZoom: 18});
+    attribution: "地理院タイル（標準地図）", maxZoom: 20, maxNativeZoom: 18, zIndex: 70});
 var relief = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/relief/{z}/{x}/{y}.png', {
-    attribution: "地理院タイル（色別標高図）", minZoom: 5, maxZoom: 20, maxNativeZoom: 15});
+    attribution: "地理院タイル（色別標高図）", minZoom: 5, maxZoom: 20, maxNativeZoom: 15, zIndex: 90});
 var ontake = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
     attribution: "火山基本図（御嶽山）<a target='_blank' href='http://cyberjapan.jp/legend/l_vbm_ontake.jpg'>凡例</a>",
@@ -30,11 +30,11 @@ var ontake = L.tileLayer(
 var ontakelc = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VLCD/00ontakesan/{z}/{x}/{x}-{y}-{z}.png', {
     attribution: "火山土地条件図（御嶽山）<a target='_blank' href='http://cyberjapan.jp/legend/ontake_legend.jpg'>凡例</a>",
-    minZoom: 15, maxZoom: 20, maxNativeZoom: 16});
+    minZoom: 15, maxZoom: 20, maxNativeZoom: 16, zIndex: 90});
 var gazo1 = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {
     attribution: "国土画像情報（第一期：1974～1978年撮影）(z=15以上)",
-    minZoom: 15, maxZoom: 20, maxNativeZoom: 17});
+    minZoom: 15, maxZoom: 20, maxNativeZoom: 17, zIndex: 90});
 
 var map = L.map('mapdiv', {
   center: [35.3622222, 138.7313889], zoom: 5,
