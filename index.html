@@ -32,7 +32,7 @@ var ontake = L.tileLayer(
     maxZoom: 20, maxNativeZoom: 17});
 var gazo1 = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {
-    attribution: "国土画像情報I（1974～1978年撮影）(z=15以上)",
+    attribution: "国土画像情報（第一期：1974～1978年撮影）(z=15以上)",
     minZoom: 15, maxZoom: 20, maxNativeZoom: 17});
 
 var map = L.map('mapdiv', {
@@ -44,7 +44,8 @@ L.control.layers({
   '地理院タイル（標準地図）': std,
   '地理院タイル（淡色地図）': pale,
   '地理院タイル（色別標高図）': relief,
-  '火山基本図（御岳山）': ontake
+  '火山基本図（御岳山）': ontake,
+  '国土画像情報（第一期：1974～1978年撮影）(z=15以上)': relief
 }, {}).addTo(map);
 </script>
 </body>
