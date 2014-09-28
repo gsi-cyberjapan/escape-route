@@ -30,6 +30,10 @@ var ontake = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
     attribution: "火山基本図（御岳山）<a href='http://cyberjapan.jp/legend/l_vbm_ontake.jpg'>凡例</a>",
     maxZoom: 20, maxNativeZoom: 17});
+var gazo1 = L.tileLayer(
+  'http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {
+    attribution: "国土画像情報I（1974～1978年撮影）(z=15以上)",
+    minZoom 15, maxZoom: 20, maxNativeZoom: 17});
 
 var map = L.map('mapdiv', {
   center: [35.3622222, 138.7313889], zoom: 5,
