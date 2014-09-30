@@ -14,8 +14,8 @@ body {padding: 0; margin: 0}
 html, body, #mapdiv {height: 100%; width: 100%;}
 .leaflet-container {background: #fff;}
 .button {
-  border: 2px solid #363ffb; background: #fffece; font-size: 14px;
-  width: 100px; height: 40px;
+  border: 2px solid #363ffb; background: #fffece; font-size: 12px;
+  width: 62px; height: 36px; cursor: pointer;
 }
 </style>
 </head>
@@ -62,7 +62,10 @@ jump_to_ontake.onAdd = function(map) {
   return this._div;
 }
 jump_to_ontake.update = function(props) {
-  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='http://gsi-cyberjapan.github.io/ontake/'>御嶽山噴火活動<br/>に関する情報</a>";
+  this._div.addEventListener('click', function() {
+    document.location.href = 'http://gsi-cyberjapan.github.io/ontake/';
+  });
+  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='http://gsi-cyberjapan.github.io/ontake/'>御嶽山<br/>噴火活動</a>";
 }
 jump_to_ontake.addTo(map);
 
@@ -73,7 +76,10 @@ jump.onAdd = function(map) {
   return this._div;
 }
 jump.update = function(props) {
-  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='http://portal.cyberjapan.jp/site/mapuse4/index_.html'>通常の<br/>地理院地図へ</a>";
+  this._div.addEventListener('click', function() {
+    document.location.href = 'http://portal.cyberjapan.jp/site/mapuse4/index_.html';
+  });
+  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='http://portal.cyberjapan.jp/site/mapuse4/index_.html'>通常の<br/>地理院地図</a>";
 }
 jump.addTo(map);
 
@@ -84,6 +90,9 @@ twitter.onAdd = function(map) {
   return this._div;
 }
 twitter.update = function(props) {
+  this._div.addEventListener('click', function() {
+    document.location.href = 'https://twitter.com/gsi_cyberjapan';
+  });
   this._div.innerHTML = "<a target='_blank' style='text-decoration: none; color: #363ffb' href='https://twitter.com/gsi_cyberjapan'>更新情報<br/>（Twitter）</a>";
 }
 twitter.addTo(map);
