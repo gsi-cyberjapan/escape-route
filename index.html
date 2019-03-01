@@ -8,7 +8,7 @@
 <script src="//cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
 <script src="./leaflet-hash.js"></script>
 <script src="./TileLayer.GeoJSON.js"></script>
-<script src="http://portal.cyberjapan.jp/tmp/touch_escape_route.js"></script>
+
 <style>
 body {padding: 0; margin: 0}
 html, body, #mapdiv {height: 100%; width: 100%;}
@@ -30,11 +30,11 @@ var relief = L.tileLayer(
     attribution: "地理院タイル（色別標高図）", minZoom: 5, maxZoom: 20, maxNativeZoom: 15, zIndex: 90});
 var ontake = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VBM/vbm25ontake/{z}/{x}/{x}-{y}-{z}.png', {
-    attribution: "火山基本図（御嶽山）<a target='_blank' href='http://cyberjapan.jp/legend/l_vbm_ontake.jpg'>凡例</a>",
+    attribution: "火山基本図（御嶽山）<a target='_blank' href='https://maps.gsi.go.jp/legend/l_vbm_ontake.jpg'>凡例</a>",
     minZoom: 17, maxZoom: 20, maxNativeZoom: 17, zIndex: 80});
 var ontakelc = L.tileLayer(
   'http://geolib.gsi.go.jp/tiles/thematicmap/VLCD/00ontakesan/{z}/{x}/{x}-{y}-{z}.png', {
-    attribution: "火山土地条件図（御嶽山）<a target='_blank' href='http://cyberjapan.jp/legend/ontake_legend.jpg'>凡例</a>",
+    attribution: "火山土地条件図（御嶽山）<a target='_blank' href='https://maps.gsi.go.jp/legend/ontake_legend.jpg'>凡例</a>",
     minZoom: 15, maxZoom: 20, maxNativeZoom: 16, zIndex: 90});
 var gazo1 = L.tileLayer(
   'http://cyberjapandata.gsi.go.jp/xyz/gazo1/{z}/{x}/{y}.jpg', {
@@ -77,9 +77,9 @@ jump.onAdd = function(map) {
 }
 jump.update = function(props) {
   this._div.addEventListener('click', function() {
-    document.location.href = 'http://portal.cyberjapan.jp/site/mapuse4/index_.html';
+    document.location.href = 'https://maps.gsi.go.jp/';
   });
-  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='http://portal.cyberjapan.jp/site/mapuse4/index_.html'>通常の<br/>地理院地図</a>";
+  this._div.innerHTML = "<a style='text-decoration: none; color: #363ffb' href='https://maps.gsi.go.jp/'>通常の<br/>地理院地図</a>";
 }
 jump.addTo(map);
 
